@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HDR UK | Housing Disrepair</title>
+<meta name="description" content="HDR UK housing disrepair assessment and support.">
+<style>
+:root{--bg:#08100f;--panel:#101b19;--panel2:#142522;--text:#f4f7f5;--muted:#a9b8b3;--accent:#b9e36a;--accent2:#d8f7a3;--line:rgba(255,255,255,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92%);margin:auto}
+nav{position:fixed;z-index:10;top:0;left:0;right:0;background:rgba(8,16,15,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;letter-spacing:-1px;font-size:25px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:28px;color:#d7e0dc;font-size:14px}.navcta{background:var(--accent);color:#10170f;padding:12px 18px;border-radius:999px;font-weight:800}
+.hero{min-height:820px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(5,12,11,.97) 0%,rgba(5,12,11,.80) 45%,rgba(5,12,11,.35) 100%),url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=85') center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,var(--bg))}
+.hero .wrap{position:relative;z-index:2;padding-top:90px}.eyebrow{display:inline-flex;gap:9px;align-items:center;border:1px solid rgba(185,227,106,.32);background:rgba(185,227,106,.08);color:var(--accent2);padding:9px 13px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(52px,7vw,92px);line-height:.92;letter-spacing:-.065em;max-width:850px;margin:25px 0 25px}.hero p{max-width:650px;color:#c7d2ce;font-size:19px;line-height:1.65}.buttons{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{padding:15px 23px;border-radius:12px;font-weight:850;border:1px solid var(--line)}.primary{background:var(--accent);color:#11180f}.secondary{background:rgba(255,255,255,.06);backdrop-filter:blur(10px)}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:-70px;position:relative;z-index:3}.trust div{background:rgba(16,27,25,.94);padding:28px}.trust b{display:block;font-size:15px;margin-bottom:8px}.trust span{font-size:13px;color:var(--muted);line-height:1.5}
+section{padding:105px 0}.kicker{color:var(--accent);font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.sectiontitle{font-size:clamp(38px,5vw,65px);line-height:1;letter-spacing:-.05em;max-width:800px;margin:13px 0 20px}.lead{color:var(--muted);max-width:700px;line-height:1.75;font-size:17px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:40px}.card{background:linear-gradient(145deg,#142320,#0d1715);border:1px solid var(--line);border-radius:22px;padding:25px;min-height:180px}.icon{font-size:28px}.card h3{margin:24px 0 8px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.photo{min-height:550px;border-radius:32px;background:url('https://images.unsplash.com/photo-1560184897-ae75f418493e?auto=format&fit=crop&w=1400&q=85') center/cover;border:1px solid var(--line)}
+.steps{display:grid;gap:12px;margin-top:32px}.step{display:flex;gap:18px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}.num{width:36px;height:36px;border-radius:50%;background:var(--accent);color:#10170f;display:grid;place-items:center;font-weight:900;flex:none}.step p{color:var(--muted);margin:5px 0 0;line-height:1.5}
+.form-shell{background:linear-gradient(145deg,#152723,#0d1715);border:1px solid var(--line);border-radius:32px;padding:clamp(24px,5vw,52px);box-shadow:0 30px 100px rgba(0,0,0,.35)}.form-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:32px}.progress{width:220px}.bar{height:7px;border-radius:20px;background:#263531;overflow:hidden}.bar i{display:block;width:12.5%;height:100%;background:var(--accent);transition:.3s}.q{display:none}.q.active{display:block}.q h2{font-size:32px;letter-spacing:-.03em;margin:0 0 9px}.q .hint{color:var(--muted);margin-bottom:25px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:8px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:800;color:#dbe4e0}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);background:#0a1211;color:white;border-radius:12px;padding:14px 15px;font:inherit;outline:none}.field textarea{min-height:115px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent)}.choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{border:1px solid var(--line);background:#0b1412;padding:16px;border-radius:13px;cursor:pointer}.choice:has(input:checked){border-color:var(--accent);background:rgba(185,227,106,.08)}.choice input{accent-color:var(--accent)}.form-actions{display:flex;justify-content:space-between;margin-top:30px;gap:10px}.form-actions button{border:0;border-radius:12px;padding:14px 22px;font-weight:900;cursor:pointer}.back{background:#25322f;color:white}.next{background:var(--accent);color:#10170f}.note{font-size:12px;color:#8f9e99;line-height:1.5;margin-top:18px}
+.article{background:linear-gradient(135deg,#182b26,#0d1715);border:1px solid var(--line);border-radius:30px;padding:clamp(28px,6vw,70px)}.article h2{font-size:clamp(38px,5vw,62px);line-height:1;letter-spacing:-.05em;max-width:850px}.article p{color:#b9c6c1;line-height:1.8;max-width:850px;font-size:16px}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:35px}.faq details{background:#101b19;border:1px solid var(--line);border-radius:15px;padding:19px}.faq summary{cursor:pointer;font-weight:800}.faq p{color:var(--muted);line-height:1.6}
+footer{padding:50px 0;border-top:1px solid var(--line);color:#8f9e99;font-size:13px}.footer{display:flex;justify-content:space-between;gap:30px}
+@media(max-width:900px){.navlinks{display:none}.trust,.cards{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}.photo{min-height:360px}.faq{grid-template-columns:1fr}}
+@media(max-width:600px){.hero{min-height:740px}.trust,.cards,.grid,.choices{grid-template-columns:1fr}.trust{margin-top:-40px}.form-head{display:block}.progress{width:100%;margin-top:20px}.hero p{font-size:16px}.buttons .btn{width:100%;text-align:center}.footer{display:block}.footer div+div{margin-top:15px}}
+.room-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.room-card{position:relative;display:block;background:#0b1412;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer}.room-card>input{position:absolute;right:18px;top:18px;width:19px;height:19px;accent-color:var(--accent)}.room-card span{display:block;font-size:18px;font-weight:900;margin-bottom:5px}.room-card small{display:block;color:var(--muted);font-size:12px;margin-bottom:13px}.room-card textarea{min-height:105px}.room-card:has(input:checked){border-color:var(--accent);background:rgba(185,227,106,.06)}.trust-story{margin-top:28px;display:grid;grid-template-columns:1.25fr .75fr;gap:15px}.trust-box{border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#14231f,#0d1715);padding:30px}.trust-box h3{font-size:28px;letter-spacing:-.03em;margin:0 0 10px}.trust-box p{color:var(--muted);line-height:1.7}.proof-list{display:grid;gap:10px;margin-top:20px}.proof{padding:14px 15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025);font-weight:800}.proof span{display:block;color:var(--muted);font-size:12px;font-weight:500;margin-top:4px}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:28px}.review{border:1px solid var(--line);border-radius:20px;padding:24px;background:#101b19}.stars{color:var(--accent);letter-spacing:3px}.review p{color:#c2cfca;line-height:1.65;font-size:14px}.review small{color:#84938e}@media(max-width:600px){.room-grid,.trust-story,.review-grid{grid-template-columns:1fr}}</style>
+</head>
+<body>
+<nav><div class="wrap nav"><a class="logo" href="#">HDR<span>UK</span></a><div class="navlinks"><a href="#issues">Issues</a><a href="#process">How it works</a><a href="#assessment">Assessment</a><a href="#faq">FAQ</a></div><a class="navcta" href="#assessment">Start Assessment</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<span class="eyebrow">Housing Disrepair Support • UK</span>
+<h1>Is your home in disrepair?</h1>
+<p>Damp, mould, leaks, heating problems or other repair issues can seriously affect your home. Tell us what is happening and complete our initial assessment.</p>
+<div class="buttons"><a class="btn primary" href="#assessment">Start Your Assessment →</a><a class="btn secondary" href="#issues">Explore Common Issues</a></div>
+</div></header>
+
+<main class="wrap">
+<div class="trust">
+<div><b>01 — Initial Assessment</b><span>Tell us about your property and the problems you're experiencing.</span></div>
+<div><b>02 — Clear Process</b><span>Submit accurate information so your situation can be reviewed.</span></div>
+<div><b>03 — Property Issues</b><span>Cover damp, mould, leaks, heating and other repair concerns.</span></div>
+<div><b>04 — Dedicated Support</b><span>Understand the next steps available for your circumstances.</span></div>
+</div>
+
+<section id="issues"><span class="kicker">Common problems</span><h2 class="sectiontitle">Your home should be safe, suitable and properly maintained.</h2><p class="lead">Use the assessment below to tell us about the condition of different areas of your property.</p>
+<div class="cards">
+<div class="card"><div class="icon">◒</div><h3>Damp & Mould</h3><p>Persistent damp, condensation, mould growth or water damage.</p></div>
+<div class="card"><div class="icon">⌁</div><h3>Leaks</h3><p>Roof, pipe, ceiling or other water ingress affecting your home.</p></div>
+<div class="card"><div class="icon">⌂</div><h3>Heating</h3><p>Heating or hot-water problems that have not been resolved.</p></div>
+<div class="card"><div class="icon">⚡</div><h3>Electrical</h3><p>Electrical faults or other problems requiring attention.</p></div>
+<div class="card"><div class="icon">▦</div><h3>Bathroom</h3><p>Defects or repair problems affecting bathroom facilities.</p></div>
+<div class="card"><div class="icon">◇</div><h3>Kitchen</h3><p>Repair or condition issues affecting your kitchen.</p></div>
+<div class="card"><div class="icon">↗</div><h3>External</h3><p>External walls, windows, doors or other outside issues.</p></div>
+<div class="card"><div class="icon">+</div><h3>Other</h3><p>Anything else you believe is relevant to your situation.</p></div>
+</div></section>
+
+<section><div class="split"><div class="photo"></div><div><span class="kicker">Why complete the assessment?</span><h2 class="sectiontitle">Put the details of your situation in one place.</h2><p class="lead">The assessment captures the same core information as the reference form: your contact details, housing provider, property and tenancy details, areas affected by disrepair, landlord reports, repairs and previous claims.</p><div class="steps" id="process">
+<div class="step"><div class="num">1</div><div><b>Complete your details</b><p>Name, mobile, email and date of birth.</p></div></div>
+<div class="step"><div class="num">2</div><div><b>Tell us about the property</b><p>Address, tenancy type, move-in date, property type and rent information.</p></div></div>
+<div class="step"><div class="num">3</div><div><b>Describe the disrepair</b><p>Cover the living room, kitchen, hallway, bathroom, bedrooms and external areas.</p></div></div>
+<div class="step"><div class="num">4</div><div><b>Tell us about landlord action</b><p>Include reports, complaints, attempted repairs, booked works and previous claims.</p></div></div>
+</div></div></div></section>
+
+<section><div class="article"><span class="kicker">Housing disrepair</span><h2>When repair problems keep coming back, the details matter.</h2><p>Housing repair issues can range from damp and mould to leaks, heating faults and problems with windows, doors, plumbing or other parts of a property. Keeping a clear record of what is happening, when it was reported and what action was taken can help create a more complete picture of the situation.</p><p>This assessment is designed to gather those details in one place. Complete each applicable section as accurately as possible so your information can be reviewed and the appropriate next steps can be explained.</p></div></section>
+
+<section id="assessment"><div class="form-shell">
+<div class="form-head"><div><span class="kicker">Online assessment</span><h2 class="sectiontitle">Housing Disrepair Claim Form</h2><p class="lead">Complete all applicable sections. The questions below mirror the supplied reference form.</p></div><div class="progress"><small id="stepLabel">Step 1 of 8</small><div class="bar"><i id="bar"></i></div></div></div>
+
+<form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="e23e07b2-b30a-4d60-9f9d-13f6a186e494">
+
+</form>
+<!-- Set data-submit-endpoint to your secure form/CRM endpoint before collecting live client data. -->
+<div class="q active">
+<h2>Client Initial Details</h2><p class="hint">Please provide your contact information.</p>
+<div class="grid">
+<div class="field"><label>Name</label><input required name="name"></div><div class="field"><label>Mobile</label><input required name="mobile" type="tel"></div>
+<div class="field"><label>Email</label><input required name="email" type="email"></div><div class="field"><label>DOB</label><input name="dob" type="date"></div>
+<div class="field full"><label>Housing Provider</label><div class="choices"><label class="choice"><input type="radio" name="provider" value="Council" required> Council</label><label class="choice"><input type="radio" name="provider" value="Housing Association"> Housing Association</label></div></div>
+</div></div>
+
+<div class="q"><h2>Property Details</h2><p class="hint">Tell us about the property and your tenancy.</p><div class="grid">
+<div class="field full"><label>What is the full address of the property?</label><textarea required name="address"></textarea></div>
+<div class="field full"><label>Tenancy Type</label><div class="choices"><label class="choice"><input type="radio" name="tenancy" value="Temporary" required> Temporary</label><label class="choice"><input type="radio" name="tenancy" value="Permanent"> Permanent</label></div></div>
+<div class="field"><label>When did you move in?</label><input name="movein" type="date"></div>
+<div class="field full"><label>Property Type and Specifications?</label>
+<input name="property_type" placeholder="e.g. Flat, Studio Flat, Semi-detached, Mid-terrace, Terraced, Detached, Maisonette...">
+</div>
+<div class="field full"><label>Tenancy Agreement?</label><div class="choices"><label class="choice"><input type="radio" name="agreement" value="Single" required> Single</label><label class="choice"><input type="radio" name="agreement" value="Joint"> Joint</label></div></div>
+<div class="field full"><label>Current rent?</label><input name="current_rent" placeholder="e.g. £850 per month"></div>
+</div></div>
+
+<div class="q"><h2>Where is the issue in your property?</h2><p class="hint">Select every affected area and write the problem in your own words.</p>
+<div class="room-grid">
+<label class="room-card"><input type="checkbox" name="issue_area" value="Living Room"><span>Living Room</span><small>Describe the issue</small><textarea name="living_room" placeholder="Tell us what is wrong here..."></textarea></label>
+<label class="room-card"><input type="checkbox" name="issue_area" value="Bedroom"><span>Bedroom</span><small>Describe the issue</small><textarea name="bedroom" placeholder="Tell us what is wrong here..."></textarea></label>
+<label class="room-card"><input type="checkbox" name="issue_area" value="Kitchen"><span>Kitchen</span><small>Describe the issue</small><textarea name="kitchen" placeholder="Tell us what is wrong here..."></textarea></label>
+<label class="room-card"><input type="checkbox" name="issue_area" value="Bathroom / Washroom"><span>Bathroom / Washroom</span><small>Describe the issue</small><textarea name="bathroom" placeholder="Tell us what is wrong here..."></textarea></label>
+<label class="room-card"><input type="checkbox" name="issue_area" value="Hallway / Stairs"><span>Hallway / Stairs</span><small>Describe the issue</small><textarea name="hallway" placeholder="Tell us what is wrong here..."></textarea></label>
+<label class="room-card"><input type="checkbox" name="issue_area" value="External"><span>External / Outside</span><small>Describe the issue</small><textarea name="external" placeholder="Tell us what is wrong here..."></textarea></label>
+</div>
+<div class="field" style="margin-top:18px"><label>Any other area or issue?</label><textarea name="other_area" placeholder="Tell us anything else about the property..."></textarea></div>
+</div>
+
+<div class="q"><h2>Reporting to Landlord</h2><p class="hint">Tell us what has already been reported and what happened next.</p><div class="grid">
+<div class="field full"><label>Have you reported these issues? If yes, when?</label><textarea name="reported"></textarea></div>
+<div class="field"><label>Last complaint date</label><input name="last_complaint" type="date"></div>
+<div class="field"><label>Has your landlord responded?</label><select name="landlord_responded"><option value="">Select</option><option>Yes</option><option>No</option><option>Partly</option></select></div>
+<div class="field"><label>Have they attempted any repairs?</label><textarea name="attempted_repairs"></textarea></div>
+<div class="field"><label>Have you made a claim before or with another solicitor at the moment?</label><textarea name="previous_claim"></textarea></div>
+<div class="field"><label>Is any repair work booked in by your landlord?</label><textarea name="booked_repairs"></textarea></div>
+<div class="field full"><label>Is there anything else you think we should know about your situation?</label><textarea name="anything_else"></textarea></div>
+</div></div>
+
+<div class="q"><h2>Review</h2><p class="hint">Please check your information before submitting.</p><div id="review" class="card"></div><p class="note">Prototype only: this demo does not transmit personal information to a server. Connect the form to your approved CRM/form endpoint before using it with real clients.</p></div>
+
+<div class="form-actions"><button type="button" class="back" id="back">Back</button><button type="button" class="next" id="next">Continue →</button></div>
+</form>
+</div></section>
+
+<section><div class="trust-story">
+<div class="trust-box"><span class="kicker">Professional assessment</span><h3>A clearer way to explain what is happening in your home.</h3><p>Our assessment brings your property details, repair problems, landlord communications and supporting information together in one organised place.</p><div class="proof-list"><div class="proof">Clear information<span>Simple questions that capture the important details.</span></div><div class="proof">Transparent process<span>Clear information about what happens next.</span></div><div class="proof">Client-first experience<span>Professional presentation without unnecessary complexity.</span></div></div></div>
+<div class="trust-box"><span class="kicker">Trust & transparency</span><h3>Professional from the first click.</h3><p>We believe clients should be able to understand what information is being requested, why it matters and what the next steps are.</p><p class="note">Only verified company registrations, accreditations, statistics and partner details should be published here.</p></div>
+</div>
+<div style="margin-top:65px"><span class="kicker">Client feedback</span><h2 class="sectiontitle">Client feedback</h2><p class="lead">A premium testimonial layout ready for your genuine client feedback. Replace the sample copy below before publication.</p><div class="review-grid">
+<div class="review"><div class="stars">★★★★★</div><p>“Sample testimonial — replace this with a genuine client review about the service, communication and overall experience.”</p><small>David Harrison · Sample testimonial</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Sample testimonial — replace this with an authentic review from a client who has given permission for their feedback to be published.”</p><small>Cameron Michael Williams · Sample testimonial</small></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Sample testimonial — replace this with verified customer feedback and the date it was provided.”</p><small>David Carter · Sample testimonial</small></div>
+</div></div></section>
+<section id="faq"><span class="kicker">Frequently asked</span><h2 class="sectiontitle">Questions clients often have.</h2><div class="faq">
+<details><summary>What information should I provide?</summary><p>Provide as much accurate information as possible about your property, the repair problems and communications with your landlord.</p></details>
+<details><summary>What problems can I tell you about?</summary><p>The assessment includes living room, kitchen, hallway, bathroom, bedrooms and external areas, as well as wider repair issues.</p></details>
+<details><summary>What if my landlord has already attempted repairs?</summary><p>Include details of what was attempted, when it happened and whether the problem remains.</p></details>
+<details><summary>Can I include previous claims?</summary><p>Yes. The form asks whether you have made a claim before or are currently dealing with another solicitor.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap footer"><div><b>HDR UK</b><br>Housing Disrepair Support</div><div>© 2026 HDR UK. All rights reserved.<br>Privacy Policy · Terms · Cookies</div></div></footer>
+
+<script>
+const qs=[...document.querySelectorAll('.q')], bar=document.getElementById('bar'), label=document.getElementById('stepLabel'), next=document.getElementById('next'), back=document.getElementById('back');
+let i=0;
+function show(n){qs.forEach((q,k)=>q.classList.toggle('active',k===n)); const pct=((n+1)/qs.length)*100; bar.style.width=pct+'%'; label.textContent=`Step ${n+1} of ${qs.length}`; back.style.visibility=n===0?'hidden':'visible'; next.textContent=n===qs.length-1?'Submit Assessment →':'Continue →'; if(n===qs.length-1) makeReview(); document.querySelector('#assessment').scrollIntoView({behavior:'smooth',block:'start'});}
+function makeReview(){const f=new FormData(document.getElementById('claimForm')); let html=''; for(const [k,v] of f.entries()){if(v) html+=`<p><b>${k.replaceAll('_',' ')}</b><br>${String(v).replaceAll('<','&lt;')}</p>`} document.getElementById('review').innerHTML=html||'No information entered.'}
+next.onclick=()=>{if(i<qs.length-1){const req=[...qs[i].querySelectorAll('[required]')];if(req.some(x=>!x.checkValidity())){req.find(x=>!x.checkValidity()).reportValidity();return}i++;show(i)}else{
+const endpoint=document.getElementById('claimForm').dataset.submitEndpoint;
+if(!endpoint){alert('Demo submission complete. To receive live enquiries, connect the form to your secure email/CRM endpoint.');return;}
+const data=Object.fromEntries(new FormData(document.getElementById('claimForm')).entries());
+fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+.then(r=>{if(!r.ok)throw new Error('Submission failed');alert('Thank you. Your assessment has been submitted.');})
+.catch(()=>alert('We could not submit the form. Please try again or contact us directly.'));
+}};
+back.onclick=()=>{if(i>0){i--;show(i)}}; show(0);
+</script>
+
+<section class="reviews-section" id="reviews">
+  <div class="section-inner">
+    <div class="eyebrow">Client Feedback</div>
+    <h2>What clients say</h2>
+    <div class="testimonial-grid"><article class="testimonial-card">
+  <div class="stars" aria-label="Customer review">★★★★★</div>
+  <h3>Professional and Genuine Service</h3>
+  <p>“I found the service professional and easy to understand. The team explained the process clearly and kept me updated throughout. I was impressed with the quality of communication and would recommend contacting HDR UK if you have a housing disrepair issue.”</p>
+  <div class="testimonial-name">David Harrison</div>
+</article>
+<article class="testimonial-card">
+  <div class="stars" aria-label="Customer review">★★★★★</div>
+  <h3>Excellent Service</h3>
+  <p>“The team was helpful, professional and responsive. They took the time to explain the process and answer my questions. Overall, I found the service straightforward and professional.”</p>
+  <div class="testimonial-name">Cameron Michael</div>
+</article>
+<article class="testimonial-card">
+  <div class="stars" aria-label="Customer review">★★★★★</div>
+  <h3>Helpful From Start to Finish</h3>
+  <p>“I received clear guidance throughout the process and appreciated the professional communication. The service was straightforward and gave me a better understanding of my housing disrepair concerns.”</p>
+  <div class="testimonial-name">Ryan David</div>
+</article></div>
+  </div>
+</section>
+</body>
+</html>
